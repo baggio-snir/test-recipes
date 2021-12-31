@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le Cuisinotron</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="resources/basic.css" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                Le Cuisinotron
+            </h1>
+            <nav>
+                <menu>
+                    <li>
+                        <a href="index.php">Recettes en vrac</a>
+                    </li>
+                    <li>
+                        <a href="search.php">Rechercher</a>
+                    </li>
+                    <li>
+                        <a href="admin">Administration</a>
+                    </li>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <header>
+                        <h2>
+                            <a href="">Recette 1</a>
+                        </h2>
+                        <p>
+                            ⏱ 120m
+                        </p>
+                    </header>
+                    <p>
+                        Ingrédients...
+                    </p>
+                </article>
+                <article>
+                    <header>
+                        <h2>
+                            <a href="">Recette 2</a>
+                        </h2>
+                        <p>
+                            ⏱ 120m
+                        </p>
+                    </header>
+                    <p>
+                        Ingrédients...
+                    </p>
+                </article>
+                <article>
+                    <table>
+                        <caption>
+                            Liste des recettes
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Titre</th>
+                                <th>⏱</th>
+                                <th>Ingredients ?</th>
+                                <th>Etapes ?</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <th>
+                                    <a href="">
+                                        Recette 1
+                                    </a>
+                                </th>
+                                <td>
+                                    120m
+                                </td>
+                                <td>
+                                    Y
+                                </td>
+                                <td>
+                                    n
+                                </td>
+                                <td>
+                                    <a href="">✏</a>
+                                    <a href=""
+                                       onclick="return confirm('Êtes-vous sûr de vouloir supprimer définitivement cette recette ?');">❌</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <th>
+                                    <a href="">
+                                        Recette 2
+                                    </a>
+                                </th>
+                                <td>
+                                    -
+                                </td>
+                                <td>
+                                    n
+                                </td>
+                                <td>
+                                    n
+                                </td>
+                                <td>
+                                    <a href="">✏</a>
+                                    <a href=""
+                                       onclick="return confirm('Êtes-vous sûr de vouloir supprimer définitivement cette recette ?');">❌</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <aside>
+                <form method="post" action="">
+                    <fieldset>
+                        <legend>Créer une nouvelle recette</legend>
+                        <p>
+                            <label>
+                                Titre de la recette:
+                                <input type="text" name="title" required="required" placeholder="Le nom de la recette" />
+                            </label>
+                            <input type="submit" name="createRecipe" value="Créer cette nouvelle recette !" />
+                        </p>
+                    </fieldset>
+                </form>
+                <form method="post" action="">
+                    <fieldset>
+                        <legend>Mise à jour de la recette #1</legend>
+                        <p>
+                            <label>
+                                Titre:
+                                <input type="text"
+                                       name="title"
+                                       required="required"
+                                       placeholder="Le nom de la recette"
+                                       value="Test" />
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Temps de préparation:
+                                <input type="number"
+                                       name="time"
+                                       min="0"
+                                       step="5"
+                                       required="required"
+                                       value="0" />
+                            </label>
+                        </p>
+                        <p>
+                            <label for="recipeIngredients">
+                                Ingrédients:
+                            </label>
+                            <textarea id="recipeIngredients" name="ingredients" required="required"></textarea>
+                        </p>
+                        <p>
+                            <label for="recipeSteps">
+                                Etapes de préparation:
+                            </label>
+                            <textarea id="recipeSteps" name="steps" required="required"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" name="updateRecipe" value="Mettre à jour cette recette !" />
+                        </p>
+                    </fieldset>
+                </form>
+            </aside>
+        </main>
+        <footer>
+            Copyleft Baggio SNIR
+            -
+            Inspiré de
+            <a href="https://twitter.com/LeCuisinotron">https://twitter.com/LeCuisinotron</a>
+        </footer>
+    </body>
+</html>
