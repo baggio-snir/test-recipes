@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Admin side"
+AuthUserFile /var/www/cuisinotron
+Require valid-user
